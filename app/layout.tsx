@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head></head>
-      <body className={`${pretendard.variable} font-pretendard`}>
+      <body className={`${pretendard.variable} font-pretendard m-auto`}>
         {children}
         <Script
           type="text/javascript"
