@@ -10,6 +10,7 @@
     "predev": "lsof -i :3000 | grep LISTEN | awk '{print $2}' | xargs kill -9"
   },
   "dependencies": {
+    "@types/navermaps": "^3.7.8",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

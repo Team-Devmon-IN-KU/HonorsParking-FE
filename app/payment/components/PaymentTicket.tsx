@@ -1,16 +1,43 @@
-import React from 'react'
-import Image from 'next/image'
+import React from "react";
+import Image from "next/image";
+import { Coupon } from "./PaymentTicketComponent";
 
-export default function PaymentTicket() {
+interface PaymentTicektProps {
+  coupon: Coupon;
+  isSelected: boolean;
+  onToggle: (coupon: Coupon) => void;
+}
+
+export default function PaymentTicket({
+  coupon,
+  isSelected,
+  onToggle,
+}: PaymentTicektProps) {
   return (
-    <div className='w-full bg-white p-5 rounded-[20px] flex items-center gap-2'>
-      <div className='rounded-full bg-[#F6F6F6] w-[45px] h-[45px] flex items-center justify-center'>
-        <Image src="/src/icon/TicketNotOutline.svg" alt='' width={20} height={24}/>
+    <div className={`w-full bg-white rounded-[20px] flex items-center box-border gap-2 ${isSelected  ? "border-2 border-[#093AEE] p-[18px]" : "p-[1.25rem]"}`} onClick={() => onToggle(coupon)}>
+      <div className="rounded-full bg-[#F6F6F6] w-[45px] h-[45px] flex items-center justify-center">
+        {isSelected ? (
+          <Image
+            src="/src/icon/OnTicket.svg"
+            alt=""
+            width={20}
+            height={24}
+          />
+        ) : (
+          <Image
+            src="/src/icon/TicketNotOutline.svg"
+            alt=""
+            width={20}
+            height={24}
+          />
+        )}
       </div>
-      <div className='flex flex-col'>
-        <span className='textmd font-[500] text-black'>회원가입 기념 50% 할인권</span>
-        <span className='text-[#7E7F83] font-[500] text-[14px]'>1일 후에 만료됨</span>
+      <div className="flex flex-col">
+        <span className="textmd font-[500] text-black">{coupon.name}</span>
+        <span className="text-[#7E7F83] font-[500] text-[14px]">
+          {coupon.daysUntilExpiry}일 후에 만료됨
+        </span>
       </div>
     </div>
-  )
+  );
 }

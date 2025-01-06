@@ -2,8 +2,6 @@ import React from "react";
 import PaymentHeader from "./components/PaymentHeader";
 import PaymentMethod from "./components/PaymentMethod";
 import PaymentTicketComponent from "./components/PaymentTicketComponent";
-import PaymentAccount from "./components/PaymentAccount";
-import PaymentButton from "./components/PaymentButton";
 
 export default function page() {
   return (
@@ -12,9 +10,7 @@ export default function page() {
       <div className="flex flex-col px-6 w-full gap-4">
         <PaymentMethod />
         <PaymentTicketComponent />
-        <PaymentAccount />
       </div>
-      <PaymentButton />
     </div>
   );
 }
