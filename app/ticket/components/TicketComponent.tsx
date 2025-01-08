@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useState } from "react";
+import TicketBox from "./TicketBox";
 
 export default function TicketComponent() {
   const [buttonSelected, setButtonSelected] = useState<boolean>(false);
@@ -14,16 +15,20 @@ export default function TicketComponent() {
     setButtonSelected(true);
   };
   return (
-    <div className="px-6">
+    <div className="px-6 space-y-4">
       <div className="bg-[#f8f8f8] rounded-[999px] w-full grid grid-cols-2 py-4 relative">
         <button
-          className={`z-10 font-[500] text-[17px] ${!buttonSelected ? "text-white" : "text-[#2a2a2a]"}`}
+          className={`z-10 font-[500] text-[17px] ${
+            !buttonSelected ? "text-white" : "text-[#2a2a2a]"
+          }`}
           onClick={handleSubcriptionSelect}
         >
           정기권
         </button>
         <button
-          className={`z-10 font-[500] text-[17px] ${buttonSelected ? "text-white" : "text-[#2a2a2a]"}`}
+          className={`z-10 font-[500] text-[17px] ${
+            buttonSelected ? "text-white" : "text-[#2a2a2a]"
+          }`}
           onClick={handleDiscountSelect}
         >
           할인권
@@ -33,6 +38,11 @@ export default function TicketComponent() {
             buttonSelected ? "left-[49%]" : "left-[1%]"
           }`}
         ></div>
+      </div>
+      <div className="space-y-3">
+        <TicketBox />
+        <TicketBox />
+        <TicketBox />
       </div>
     </div>
   );
