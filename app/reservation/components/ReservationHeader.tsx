@@ -23,23 +23,6 @@ export default function ReservationHeader() {
           <Image src="/src/icon/SideBar.svg" alt="" width={24} height={24} />
         </button>
         <span className="font-[700] text-center col-span-3">주차장 예약</span>
-        <button className="justify-self-end">
-          {newNotification > 0 ? (
-            <Image
-              src="/src/icon/NewNotification.svg"
-              alt=""
-              width={24}
-              height={24}
-            />
-          ) : (
-            <Image
-              src="/src/icon/Notification.svg"
-              alt=""
-              width={24}
-              height={24}
-            />
-          )}
-        </button>
       </div>
       <div
         className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
