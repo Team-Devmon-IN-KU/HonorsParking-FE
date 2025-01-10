@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import React from 'react'
-import { MdKeyboardArrowRight } from 'react-icons/md'
 
 export default function CarNumberInput() {
   return (

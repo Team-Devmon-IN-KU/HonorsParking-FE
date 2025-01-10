@@ -6,7 +6,6 @@ import React, { useState } from "react";
 
 export default function ReservationHeader() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
-  const newNotification = 1;
 
   const toggleSideBar = () => {
     setIsSideBarOpen(true);
