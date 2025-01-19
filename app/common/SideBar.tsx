@@ -28,7 +28,7 @@ export default function SideBar() {
   };
 
   return (
-    <div className="bg-white w-[80vw] h-[100vh] overflow-y-auto scrollbar-hide">
+    <div className="bg-white w-[80vw] max:w-[614px] h-[100vh] overflow-y-auto scrollbar-hide">
       <div className="px-6 py-12 pt-[70px] space-y-10">
         <span className="font-[700] text-lg">HONORS KOREA</span>
         <div className="flex flex-col">
