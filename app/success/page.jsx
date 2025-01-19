@@ -1,9 +1,11 @@
-import { useEffect } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
+"use client";
 
-export function SuccessPage() {
-  const navigate = useNavigate();
-  const [searchParams] = useSearchParams();
+import { useEffect } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
+
+export default function SuccessPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams(); // No destructuring here
 
   useEffect(() => {
     // 쿼리 파라미터 값이 결제 요청할 때 보낸 데이터와 동일한지 반드시 확인하세요.
@@ -15,7 +17,7 @@ export function SuccessPage() {
     };
 
     async function confirm() {
-      const response = await fetch("/confirm", {
+      const response = await fetch("http://localhost:8080/confirm", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -27,7 +29,7 @@ export function SuccessPage() {
 
       if (!response.ok) {
         // 결제 실패 비즈니스 로직을 구현하세요.
-        navigate(`/fail?message=${json.message}&code=${json.code}`);
+        router.push(`/fail?message=${json.message}&code=${json.code}`);
         return;
       }
 

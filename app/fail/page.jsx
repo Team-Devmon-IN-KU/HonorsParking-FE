@@ -1,6 +1,8 @@
+"use client";
+
 import { useSearchParams } from "react-router-dom";
 
-export function FailPage() {
+export default function FailPage() {
   const [searchParams] = useSearchParams();
 
   return (
