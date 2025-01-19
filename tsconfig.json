@@ -28,6 +28,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/payment/tosspayment/page.jsx"
-, "app/payment/tosspayment/fail/page.jsx", "app/payment/tosspayment/success/page.jsx"  ],
+, "app/fail/page.jsx", "app/success/page.jsx"  ],
   "exclude": ["node_modules"]
 }
