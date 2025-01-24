@@ -93,13 +93,17 @@ export default function ReservationDetailComponents() {
                   <span className="text-[14px] font-[500] text-[#7E7F83]">
                     시간당
                   </span>
-                  <span className="font-[700] text-[#2a2a2a] text-md">500원</span>
+                  <span className="font-[700] text-[#2a2a2a] text-md">
+                    500원
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-[14px] font-[500] text-[#7E7F83]">
                     입차 시작 시간
                   </span>
-                  <span className="font-[700] text-[#2a2a2a] text-md">오후 6시 10분</span>
+                  <span className="font-[700] text-[#2a2a2a] text-md">
+                    오후 6시 10분
+                  </span>
                 </div>
               </div>
             </div>
@@ -113,7 +117,7 @@ export default function ReservationDetailComponents() {
               <button
                 className="rounded-[999px] bg-[#093AEE] p-4 px-12 text-white font-[500]"
                 onClick={() => {
-                  alert("예약되었습니다!"); 
+                  alert("예약되었습니다!");
                   handleModalClose();
                 }}
               >
