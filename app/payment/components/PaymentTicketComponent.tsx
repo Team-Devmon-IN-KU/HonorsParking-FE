@@ -77,7 +77,7 @@ export default function PaymentTicketComponent() {
   }, [selectedCoupon]);
 
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-4 w-full">
       <div className="bg-white rounded-[1rem] py-6 px-4 space-y-6">
         <div className="flex justify-between items-center">
           <span className="font-[700] text-md">할인쿠폰</span>
