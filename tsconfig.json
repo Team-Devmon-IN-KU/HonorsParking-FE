@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/payment/tosspayment/page.jsx"
-, "app/fail/page.jsx", "app/success/page.jsx"  ],
+    "app/payment/tosspayment/page.tsx"
+, "app/fail/page.tsx", "app/success/page.tsx"  ],
   "exclude": ["node_modules"]
 }
