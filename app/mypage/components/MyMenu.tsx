@@ -11,6 +11,10 @@ export default function MyMenu() {
     router.push("/notice")
   }
 
+  const navigatePayInfo = () => {
+    router.push("/payment-info")
+  }
+
   return (
     <div className="px-6 w-full space-y-4">
       <span className="font-[700] text-[1.25rem]">마이메뉴</span>
@@ -19,7 +23,7 @@ export default function MyMenu() {
           <span className="font-[600] text-[#2A2A2A] text-[17px]">알림</span>
           <MdKeyboardArrowRight size={20} />
         </button>
-        <button className="flex justify-between items-center bg-white rounded-[12px] p-4">
+        <button className="flex justify-between items-center bg-white rounded-[12px] p-4" onClick={navigatePayInfo}>
           <span className="font-[600] text-[#2A2A2A] text-[17px]">
             결제 정보
           </span>

@@ -1,6 +1,15 @@
+"use client";
+
 import React from "react";
+import { useRouter } from "next/navigation";
 
 export default function MyPagePaymentComponent() {
+  const router = useRouter();
+
+  const handlePayment = () => {
+    router.push("/payment");
+  }
+
   const paymentData = {
     name: "A타워",
     time: 30,
@@ -15,7 +24,7 @@ export default function MyPagePaymentComponent() {
         <span className="text-[#2A2A2A] font-[700] text-[1.25rem]">입차시간 : {paymentData.time}분</span>
         <span className="text-md font-[400] text-[#7E7F83]">비용 : {paymentData.price} / 시간당 {paymentData.pricePerHour}</span>
       </div>
-      <button className="bg-[#093AEE] text-white text-md font-[500] p-3 rounded-[999px] mt-3">{paymentData.price}원 결제하기</button>
+      <button className="bg-[#093AEE] text-white text-md font-[500] p-3 rounded-[999px] mt-3" onClick={handlePayment}>{paymentData.price}원 결제하기</button>
     </div>
   );
 }

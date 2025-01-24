@@ -4,7 +4,7 @@ import SideBar from "@/app/common/SideBar";
 import Image from "next/image";
 import React, { useState } from "react";
 
-export default function ReservationHeader() {
+export default function TicketHeader() {
   const [isSideBarOpen, setIsSideBarOpen] = useState(false);
 
   const toggleSideBar = () => {
@@ -21,7 +21,7 @@ export default function ReservationHeader() {
         <button className="justify-self-start pl-2" onClick={toggleSideBar}>
           <Image src="/src/icon/SideBar.svg" alt="" width={24} height={24} />
         </button>
-        <span className="font-[700] text-center col-span-3">주차장 예약</span>
+        <span className="font-[700] text-center col-span-3">이용권</span>
       </div>
       <div
         className={`fixed inset-0 bg-black bg-opacity-40 transition-opacity duration-300 ${
